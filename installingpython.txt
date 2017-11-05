@@ -1,0 +1,717 @@
+    1  touch guestadditions.sh
+    2  vim guestadditions.sh 
+    3  chmod +x guestadditions.sh 
+    4  ./guestadditions.sh 
+    5  vim /etc/sudoers
+    6  vim /etc/sysconfig/network-scripts/ifcfg-enp0s8
+    7  systemctl restart NetworkManager
+    8  ip a
+    9  sync;reboot
+   10  mkdir -p /media/cdrom
+   11  mount -t iso9660 /dev/cdrom /media/cdrom
+   12  mount --help
+   13  mount -t iso9660 /dev/cdrom /media/cdrom
+   14  chmod 777 /dev/sro
+   15  cd /dev/
+   16  ls
+   17  ls -la sr0
+   18  chmod 777 sr0
+   19  ls -la sr0
+   20  cd ..
+   21  cd
+   22  mount -t iso9660 /dev/cdrom /media/cdrom
+   23  ./guestadditions.sh 
+   24  sync; reboot
+   25  cd
+   26  ip a
+   27  vim /etc/hosts
+   28  nmtui
+   29  init 6
+   30  exit
+   31  cd
+   32  mkdir /etc/chef/
+   33  chef-client
+   34  shutdown now
+   35  cd
+   36  chef-client
+   37  shutdown now
+   38  mkdir /etc/.ssh/authorized_keys
+   39  mkdir /etc/.ssh/
+   40  mkdir /etc/.ssh/authorized_keys
+   41  exit
+   42  cd
+   43  ansible
+   44  wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+   45  rpm -ivh epel-release-latest-7.noarch.rpm 
+   46  yum repolist -y ansible
+   47  ansible --version
+   48  ansible -version
+   49  ansible version
+   50  yum-config-manager --enable epel-testing
+   51  yum upgrade ansible
+   52  ansible version
+   53  ansible --version
+   54  ansible 
+   55  yum upgrade ansible
+   56  shutdown now
+   57  cd
+   58  vim /tmp/index.html 
+   59  cd /etc/ansible/
+   60  exit
+   61  cd
+   62  cat ~/.ssh/id_rsa.pub 
+   63  cd
+   64  ansible
+   65  which git
+   66  yum update -y
+   67  kill -9 3747
+   68  yum update -y
+   69  yum repolist
+   70  yum install -y ansible
+   71  ansible
+   72  rpm -qa | grep ansible
+   73  cd /etc/ansible/
+   74  ls
+   75  vim hosts
+   76  cd ..
+   77  cd
+   78  rpm -ql ansible-2.3.1.0-1.el7.noarch | grep more
+   79  rpm -ql ansible-2.3.1.0-1.el7.noarch 
+   80  rpm -ql ansible-2.3.1.0-1.el7.noarch | less
+   81  useradd --help
+   82  ssh-keygen
+   83  cat /root/.ssh/id_rsa.pub.
+   84  cat /root/.ssh/id_rsa.pub
+   85  cd /etc/ansible/
+   86  vim hosts 
+   87  ping 192.168.99.102
+   88  vim hosts 
+   89  ansible -m ping all
+   90  ansible -m ping root@192.168.99.103
+   91  ansible -m ping root@192.168.99.104
+   92  ansible -m ping root@192.168.99.102
+   93  ansible -m ping all
+   94  cd
+   95  cat /etc/hosts
+   96  vim /etc/hosts
+   97  ansible -m ping all
+   98  ssh node1.example.com
+   99  ssh node2.example.com
+  100  ssh node3.example.com
+  101  ssh node4.example.com
+  102  ssh node5.example.com
+  103  ansible -m ping all
+  104  cd /etc/ansible/
+  105  ls -ld
+  106  exit
+  107  chown -R user:user /etc/ansible/
+  108  exit
+  109  cd ..
+  110  cd
+  111  cd /etc/ansible/
+  112  ls -ld
+  113  ansible -m ping all
+  114  ansible -m ping all   -vvvv
+  115  cd
+  116  exit
+  117  vim /etc/ansible/hosts
+  118  ansible -m ping all   -vvvv
+  119  cd /etc/ansible/
+  120  ansible -m ping all   -vvvv
+  121  ansible -m ping 192.168.99.102   -vvvv
+  122  ansible -m ping 192.168.99.104   -vvvv
+  123  ansible -m ping 192.168.99.105   -vvvv
+  124  ansible -m ping 192.168.99.103   -vvvv
+  125  git
+  126  yum install -y git
+  127  git https://github.com/sanjaypandrala/ansibletutym.git
+  128  https://github.com/sanjaypandrala/ansibletutym.git
+  129  echo "# ansibletutym" >> README.md
+  130  git init
+  131  git add README.md
+  132  git commit -m "first commit"
+  133  git remote add origin https://github.com/sanjaypandrala/ansibletutym.git
+  134  git push -u origin master
+  135  git remote add origin https://github.com/sanjaypandrala/ansibletutym.git
+  136  git push -u origin master
+  137  vim ansiblenotreachabletr
+  138  git add ansiblenotreachabletr 
+  139  git commit -m "ansiblenotreachabletr" 
+  140  git push
+  141  cat ~/.ssh/id_rsa.pub 
+  142  ip a
+  143  ansible -m ping node1.example.com   -vvvv
+  144  ansible -m ping node2.example.com   -vvvv
+  145  ansible -m ping node3.example.com   -vvvv
+  146  ansible -m ping node4.example.com   -vvvv
+  147  ansible -m ping node5.example.com   -vvvv
+  148  vim ansiblecmdy
+  149  git add ansiblecmdy 
+  150  git commit -m "ansiblecmdy" 
+  151  git push
+  152  vim ansibleplaybook
+  153  mv ansibleplaybook ansibleapache.yml
+  154  vim ansibleapache.yml 
+  155  ls
+  156  vim hosts 
+  157  vim ansibleapache.yml 
+  158  ansible-playbook -i appgroup  ansibleapache.yml 
+  159  ansible-playbook ansibleapache.yml --check 
+  160  vim ansibleapache.yml 
+  161  vim ./tmp/index.html
+  162  sudo vim ./tmp/index.html
+  163  cd
+  164  sudo vim /tmp/index.html
+  165  cd /etc/ansible/
+  166  ansible-playbook ansibleapache.yml --check 
+  167  ansible -m ping appgroup
+  168  ansible -m ping all
+  169  ansible-playbook ansibleapache.yml --check 
+  170  ansible-playbook ansibleapache.yml --check  -vvvv
+  171  vim ansibleapache.yml 
+  172  ansible-playbook ansibleapache.yml --check  -vvvv
+  173  ansible log
+  174  ansible-playbook ansibleapache.yml --check  -vvvv -s
+  175  ansible-doc -l
+  176  ansible-playbook apache-yml -i /etc/ansible/hosts  -l appgroup
+  177  ansible-playbook ansibleapache-yml -i /etc/ansible/hosts  -l appgroup
+  178  ansible-playbook ansibleapache.yml -i /etc/ansible/hosts  -l appgroup
+  179  ansible-playbook ansibleapache.yml -i /etc/ansible/hosts  --ask-sudo-pass -l appgroup
+  180  vim ansibleapache.yml 
+  181  ansible-playbook ansibleapache.yml -i /e
+  182  git add ansibleapache.yml 
+  183  git commit -m "ansibleapache.yml usage ansible-playbook ansibleapache.yml -i /etc/ansible/hosts  --ask-sudo-pass" 
+  184  git push
+  185  vim ansibleapache.yml 
+  186  vim ec2creation.yml
+  187  git add ec2creation.yml 
+  188  git commit -m "ec2creation.yml" 
+  189  git push
+  190  vim sshkeyuploadtoaws
+  191  git add sshkeyuploadtoaws 
+  192  git commit -m "sshkeyuploadtoaws" 
+  193  git push
+  194  shutdown  now
+  195  cd
+  196  shutdown now
+  197  cd
+  198  shutdown now
+  199  cd
+  200  cd /etc/ansible/
+  201  vim hosts 
+  202  vim hashingpasswd
+  203  git add hashingpasswd
+  204  git commit -m "hashingpasswd"
+  205  git push
+  206  exit
+  207  cd
+  208  git set-url -add git@github.com:sanjaypandrala/ansibletutym.git
+  209  git --help
+  210  git remote set-url origin git@github.com:sanjaypandrala/ansibletutym.git
+  211  ls
+  212  cd /etc/ansible/
+  213  ls
+  214  git remote set-url origin git@github.com:sanjaypandrala/ansibletutym.git
+  215  git push
+  216  ansible-galaxy init webstack
+  217  ls
+  218  cd webstack/
+  219  ls
+  220  cd defaults/
+  221  ls
+  222  cd ..
+  223  cd handlers/
+  224  ls
+  225  cd ..
+  226  cd meta/
+  227  ls
+  228  cd ..
+  229  ls
+  230  cd tasks/
+  231  ls
+  232  cd ..
+  233  cd tests/
+  234  ls
+  235  cd ..
+  236  cd vars/
+  237  ls
+  238  cd ..
+  239  tree
+  240  yum install -y tree
+  241  tree
+  242  mkdir group_vars
+  243  mkdir hosts
+  244  vim main.yml
+  245  rm -rf defaults/
+  246  rm -rf handlers/
+  247  rm -rf tests/ vars/ tasks/
+  248  ls
+  249  tree
+  250  cd group_vars/
+  251  vim all
+  252  cd ..
+  253  mkdir roles
+  254  mkdir roles/common
+  255  mkdir roles/web
+  256  cd roles/common/
+  257  ls
+  258  mkdir handlers
+  259  mkdir handlers/main.yml
+  260  mkdir tasks
+  261  mkdir tasks/main.yml
+  262  mkdir templates
+  263  mkdir templates/ntp.conf
+  264  mkdir templates/resolv.conf
+  265  cd ../web/
+  266  mkdir files/index.html
+  267  mkdir files/
+  268  mkdir files/index.html
+  269  mkdir handlers/main.yml
+  270  mkdir handlers/
+  271  mkdir handlers/main.yml
+  272  mkdir tasks
+  273  mkdir tasks/main.yml
+  274  cd ..
+  275  tree
+  276  cd group_vars/
+  277  ls
+  278  cd ..
+  279  cd roles/
+  280  ls
+  281  cd common/
+  282  ls
+  283  cd handlers/
+  284  ls
+  285  ls -la
+  286  vim main.yml
+  287  rm -fr main.yml/
+  288  vim main.yml
+  289  cd ..
+  290  cd tasks/
+  291  ls
+  292  rm -rf main.yml/
+  293  vim main.yml
+  294  cd ..
+  295  cd templates/
+  296  ls
+  297  rm -rf ntp.conf/ resolv.conf/
+  298  vim ntp.conf
+  299  vim resolv.conf
+  300  cd ..
+  301  tree
+  302  rm -rf meta/
+  303  ls
+  304  rm -rf hosts/
+  305  vim hosts
+  306  ls
+  307  tree
+  308  cd roles/web/
+  309  ls
+  310  cd files/
+  311  ls
+  312  rm -rf index.html/
+  313  vim index.html
+  314  cd ..
+  315  cd handlers/
+  316  rm -rf main.yml/
+  317  touch main.yml
+  318  cd ..
+  319  touch tasks/main.yml
+  320  cd tasks/
+  321  ls
+  322  rm -rf main.yml/
+  323  ls
+  324  touch main.yml
+  325  cd ../../
+  326  cd ..
+  327  tree
+  328  touch LICENSE.md
+  329  tree
+  330  vim group_vars/all 
+  331  nslookup server0.ca.pool.ntp
+  332  cat group_vars/all 
+  333  nslookup server0.ca.pool.ntp.org
+  334  cd roles/
+  335  ls
+  336  cd common/tasks/
+  337  ls
+  338  vim main.yml 
+  339  dig ntp.pool.org
+  340  ls
+  341  cd ..
+  342  vim group_vars/all 
+  343  cd roles/common/
+  344  ls
+  345  vim handlers/main.yml 
+  346  vim templates/ntp.conf 
+  347  cd  ../web/
+  348  ls
+  349  vim files/index.html 
+  350  vim tasks/main.yml 
+  351  vim handlers/main.yml 
+  352  ls
+  353  cd ..
+  354  vim hosts
+  355  vim main.yml 
+  356  ansible-playbook main.yml -i hosts --check
+  357  cd ..
+  358  cd webstack/
+  359  vim group_vars/a
+  360  vim group_vars/all 
+  361  ansible-playbook main.yml -i hosts --check
+  362  vim roles/common/tasks/main.yml 
+  363  ansible-playbook main.yml -i hosts --check
+  364  ansible-playbook main.yml -i hosts --check --ask-pass
+  365  vim group_vars/all 
+  366  tree
+  367  vim main.yml 
+  368  ansible-playbook main.yml -i hosts --check --ask-pass
+  369  vim main.yml 
+  370  ansible-playbook main.yml -i hosts --check --ask-pass
+  371  #ansible-playbook main.yml -i hosts --check --ask-pass
+  372  #ansible-playbook main.yml -i hosts  --ask-pass
+  373  ansible-playbook main.yml -i hosts  --ask-pass
+  374  vim main.yml 
+  375  ansible-playbook main.yml -i hosts --check --ask-pass
+  376  vim main.yml 
+  377  ansible-playbook main.yml -i hosts --check --ask-pass
+  378  vim main.yml 
+  379  ansible-playbook main.yml -i hosts --check --ask-pass
+  380  ansible-playbook main.yml -i hosts --check --ask-pass
+  381  ansible-playbook main.yml -i hosts --ask-pass
+  382  service httpd status
+  383  ls
+  384  cd ..
+  385  git add webstack/
+  386  git commit -m "webstack"
+  387  git push
+  388  vim passwordhashing
+  389  ls
+  390  git add passwordhashing
+  391  git commit -m "passwordhashing"
+  392  git push 
+  393  pip
+  394  yum install -y python-pip
+  395  pip
+  396  python -V
+  397  rpm -qa | grep pip
+  398  pip list
+  399  pip install --upgrade pip
+  400  vim patchingplaybook.yml
+  401  ansible-playbook -m patchingplaybook.yml --check
+  402  ansible-playbook  patchingplaybook.yml --check
+  403  vim patchingplaybook.yml
+  404  ansible-playbook  patchingplaybook.yml --check
+  405  vim patchingplaybook.yml
+  406  ansible-playbook  patchingplaybook.yml --check
+  407  vim patchingplaybook.yml
+  408  ansible-playbook  patchingplaybook.yml --check
+  409  vim patchingplaybook.yml
+  410  ansible-playbook  patchingplaybook.yml --check
+  411  vim patchingplaybook.yml
+  412  ansible-playbook  patchingplaybook.yml --check
+  413  vim patchingplaybook.yml
+  414  ansible-playbook  patchingplaybook.yml --check
+  415  vim patchingplaybook.yml
+  416  ansible-playbook  patchingplaybook.yml --check
+  417  git add patchingplaybook.yml
+  418  git commit -m "patchingplaybook.yml"
+  419  git push
+  420  vim usermanagement
+  421  ansible-playbook usermanagement --list-tags
+  422  vim usermanagement
+  423  ansible-playbook usermanagement --check
+  424  vim usermanagement
+  425  ansible-playbook usermanagement --check
+  426  vim usermanagement
+  427  ansible-playbook usermanagement --check
+  428  vim usermanagement
+  429  ansible-playbook usermanagement --check
+  430  vim patchingplaybook.yml
+  431  vim usermanagement
+  432  ansible-playbook usermanagement --check
+  433  vim usermanagement
+  434  ansible-playbook usermanagement --check
+  435  vim usermanagement
+  436  ansible-playbook usermanagement --check
+  437  vim usermanagement
+  438  ansible-playbook usermanagement --check
+  439  vim usermanagement
+  440  ansible-playbook usermanagement --check
+  441  vim usermanagement
+  442  ansible-playbook usermanagement --check
+  443  vim usermanagement
+  444  ansible-playbook usermanagement --check
+  445  vim usermanagement
+  446  ansible-playbook usermanagement --check
+  447  vim usermanagement
+  448  ansible-playbook usermanagement --check
+  449  vim usermanagement
+  450  ansible-playbook usermanagement --check
+  451  vim usermanagement
+  452  ansible-playbook usermanagement --check
+  453  vim usermanagement
+  454  ansible-playbook usermanagement --check
+  455  vim usermanagement
+  456  ansible-playbook usermanagement --check
+  457  vim usermanagement
+  458  ansible-playbook usermanagement --check
+  459  vim usermanagement
+  460  ansible-playbook usermanagement --check
+  461  vim usermanagement
+  462  ansible-playbook usermanagement --check
+  463  vim usermanagement
+  464  ansible-playbook usermanagement --check
+  465  vim usermanagement
+  466  ansible-playbook usermanagement --check
+  467  vim usermanagement
+  468  ansible-playbook usermanagement --check
+  469  vim usermanagement
+  470  ansible-playbook usermanagement --check
+  471  vim usermanagement
+  472  ansible-playbook usermanagement --check
+  473  vim usermanagement
+  474  ansible-playbook usermanagement --check
+  475  vim usermanagement
+  476  ansible-playbook usermanagement --check
+  477  vim usermanagement
+  478  ansible-playbook usermanagement --check
+  479  vim usermanagement
+  480  ansible-playbook usermanagement --check
+  481  vim usermanagement
+  482  ansible-playbook usermanagement --check
+  483  vim usermanagement
+  484  ansible-playbook usermanagement --check
+  485  vim usermanagement
+  486  ansible-playbook usermanagement --check
+  487  vim usermanagement
+  488  ansible-playbook usermanagement --check
+  489  vim usermanagement
+  490  ansible-playbook usermanagement --check
+  491  vim usermanagement
+  492  ansible-playbook usermanagement --check
+  493  vim usermanagement
+  494  ansible-playbook usermanagement --check
+  495  vim usermanagement
+  496  ansible-playbook usermanagement --check
+  497  git add usermanagement
+  498  git commit -m "usermanagement trouble shoot syntax"
+  499  git push
+  500  shutdown now
+  501  ls
+  502  ls -la
+  503  yum whatprovides */vlc
+  504  yum search vlc
+  505  yum install -y vlc
+  506  yum install -y https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm
+  507  wget https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm
+  508  rpm -Uvh https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm
+  509  cd
+  510  ls
+  511  rpm -Uvh nux-dextop-release-0-5.el7.nux.noarch.rpm 
+  512  exit
+  513  ping google.com
+  514  cd
+  515  ip a
+  516  yum install -y youtube-dl
+  517  youtube-dl -U
+  518  pip
+  519  yumtube-dl https://www.youtube.com/watch?v=KpD_YfxQhDk&index=17&list=UUtv8M1Ts2-XEn4ZV3uMn88A
+  520  youtube-dl -U
+  521  yumtube-dl -F 22 https://www.youtube.com/watch?v=KpD_YfxQhDk&index=17&list=UUtv8M1Ts2-XEn4ZV3uMn88A
+  522  youtube-dl
+  523  youtube-dl --help
+  524  yumtube-dl -F 22 https://www.youtube.com/watch?v=KpD_YfxQhDk&index=17&list=UUtv8M1Ts2-XEn4ZV3uMn88A
+  525  youtube-dl -F 22 https://www.youtube.com/watch?v=KpD_YfxQhDk&index=17&list=UUtv8M1Ts2-XEn4ZV3uMn88A
+  526  youtube-dl -F22 https://www.youtube.com/watch?v=KpD_YfxQhDk&index=17&list=UUtv8M1Ts2-XEn4ZV3uMn88A
+  527  22
+  528  ls 
+  529  cd /home/user/Downloads/
+  530  ls
+  531  youtube-dl  https://www.youtube.com/watch?v=KpD_YfxQhDk&index=17&list=UUtv8M1Ts2-XEn4ZV3uMn88A
+  532  ls
+  533  rpm -Uvh https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
+  534  yum update
+  535  yum clean all
+  536  yum repolist
+  537  yum info vlc
+  538  yum install -y vlc
+  539  ls
+  540  vlc
+  541  exit
+  542  cd
+  543  cd /home/user/Downloads/
+  544  ls
+  545  youtube-dl -F https://www.youtube.com/watch?v=jvNdfxLn45Q&index=16&list=UUtv8M1Ts2-XEn4ZV3uMn88A
+  546  ls
+  547  youtube-dl https://www.youtube.com/watch?v=jvNdfxLn45Q&index=16&list=UUtv8M1Ts2-XEn4ZV3uMn88A
+  548  yumtube-dl https://www.youtube.com/watch?v=f07lS9qLVTk&list=UUtv8M1Ts2-XEn4ZV3uMn88A&index=16
+  549  exit
+  550  ls
+  551  youtube-dl https://www.youtube.com/watch?v=f07lS9qLVTk&list=UUtv8M1Ts2-XEn4ZV3uMn88A&index=16
+  552  youtube-dl https://www.youtube.com/watch?v=AAHKwFXOxik&list=UUtv8M1Ts2-XEn4ZV3uMn88A&index=15
+  553  youtube-dl https://www.youtube.com/watch?v=Rnf37M7CGog&list=UUtv8M1Ts2-XEn4ZV3uMn88A&index=14
+  554  ls
+  555  pwd
+  556  firefox
+  557  vlc
+  558  exit
+  559  cd
+  560  cd /home/user/Downloads/
+  561  ls
+  562  #tar zcf DevOps\ Tutorial\ _\ DevOps\ Tutorial\ for\ Beginners\ _\ DevOps\ Training\ Videos\ _\ Class\ 1-KpD_YfxQhDk.mp4 
+  563  cp DevOps\ Tutorial\ _\ DevOps\ Tutorial\ for\ Beginners\ _\ DevOps\ Training\ Videos\ _\ Class\ 1-KpD_YfxQhDk.mp4 class1.mp4
+  564  tar zcf class1.mp4
+  565  tar --help
+  566  tar Cavf class1.mp4
+  567  tar Cav class1.mp4
+  568  tar C class1.mp4
+  569  ansible
+  570  cd /etc/ansible/
+  571  ls
+  572  vim hosts 
+  573  ansible
+  574  ansible -m ping all
+  575  shutdown
+  576  cd
+  577   ansible-galaxy install f500.project_deploy,v1.0.0
+  578  ls
+  579   ansible-galaxy install f500.project_deploy,v1.0.0  .
+  580   ansible-galaxy install f500.project_deploy,v1.0.0  
+  581  ansible-galaxy install -r ansible/galaxy.txt
+  582  ls
+  583  cd /home/user/Downloads/
+  584  ls
+  585  cd
+  586  ls -la
+  587  https://github.com/f500/ansible-project_deploy.git
+  588  git clone https://github.com/f500/ansible-project_deploy.git
+  589  ls
+  590  cd ansible-project_deploy/
+  591  ls
+  592  cd defaults/
+  593  ls
+  594  vim main.yml 
+  595  cd
+  596   ansible-galaxy uninstall f500.project_deploy,v1.0.0  
+  597   ansible-galaxy remove f500.project_deploy,v1.0.0  
+  598   ansible-galaxy delete f500.project_deploy,v1.0.0  
+  599   ansible-galaxy install f500.project_deploy,v1.0.0  
+  600   ansible-galaxy info f500.project_deploy,v1.0.0  
+  601  cd /etc/ansible/roles/
+  602  ls
+  603  cd f500.project_deploy/
+  604  ls
+  605  cd defaults/
+  606  ls
+  607  vim main.yml 
+  608  cd ..
+  609  ls
+  610  cd library/
+  611  ls
+  612  vim deploy 
+  613  cd ..
+  614  cd meta/
+  615  la
+  616  ls
+  617  vim main.yml 
+  618  cd ..
+  619  vim meta/
+  620  cd meta/
+  621  la
+  622  ls
+  623  vim main.yml 
+  624  cd ..
+  625  ls
+  626  vim main.yml 
+  627  cd
+  628  git
+  629  git remote set-url origin https://github.com/sanjaypandrala/ansible-for-devops.git
+  630  ls -la
+  631  git remote set-url origin https://github.com/sanjaypandrala/ansible-for-devops.git
+  632  git remote -v
+  633  ls
+  634  cd /etc/ansible/roles/
+  635  ls
+  636  https://github.com/sanjaypandrala/ansibleprojectdeploy.git
+  637  git init ansibleprojectdeploy
+  638  ls
+  639  mv f500.project_deploy/ ansibleprojectdeploy/
+  640  ls
+  641  cd ansibleprojectdeploy/
+  642  ls
+  643  echo "# ansibleprojectdeploy" >> README.md
+  644  git init
+  645  git add README.md
+  646  git commit -m "first commit"
+  647  git remote add origin https://github.com/sanjaypandrala/ansibleprojectdeploy.git
+  648  git push -u origin master
+  649  ls
+  650  git add .
+  651  git commit -m 'f500.project_deploy'
+  652  git push
+  653  vim ansibleprojectdeploypresentation.txt
+  654  git add ansibleprojectdeploypresentation.txt
+  655  git commit -m 'ansibleprojectdeploypresentation.txt'
+  656  git push ansibleprojectdeploypresentation.txt
+  657  git config --global push.default simple
+  658  git push ansibleprojectdeploypresentation.txt
+  659  git push
+  660  exit
+  661  cd
+  662  ll
+  663  ip a
+  664  ll
+  665  cd ansible-for-devops/
+  666  ls
+  667  cd ansible-for-devops/
+  668  ls
+  669  cd deployments
+  670  ls
+  671  vim requirements.yml 
+  672  cd playbooks/
+  673  ls
+  674  vim deploy.yml 
+  675  vim inventory-ansible 
+  676  vim main.yml 
+  677  vim provision.yml 
+  678  cd templates/
+  679  ls
+  680  vim secrets.yml.j2 
+  681  cd ..
+  682  vim vars.yml 
+  683  cd
+  684  python
+  685  sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+  686  kill -9 3910
+  687  sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+  688  sudo yum install -y python34u python34u-libs python34u-devel python34u-pip
+  689  yum whatprovides */python3.6.1
+  690  cd /home/user/Downloads/
+  691  ls
+  692  shutdown
+  693  cd
+  694  pip
+  695  pip install python3.6.1
+  696  cd /home/user/Downloads/
+  697  ls
+  698  shutdown
+  699  shutdown now
+  700  cd
+  701  python3.6
+  702  ls
+  703  cd pythontut/
+  704  ls
+  705  atom
+  706  ls
+  707  cat test1.py 
+  708  python3.6
+  709  git
+  710  echo "# pythontut" >> README.md
+  711  git init
+  712  git add README.md
+  713  git commit -m "first commit"
+  714  git remote add origin https://github.com/sanjaypandrala/pythontut.git
+  715  git push -u origin master
+  716  ls
+  717  history > installingpython.txt
