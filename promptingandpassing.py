@@ -2,6 +2,7 @@ from sys import argv
 
 script, user_name = argv
 prompt = '> '
+prompt = f'{script} {user_name}>'   # try this
 
 print(f"Hi {user_name}, I'm the {script} script.")
 print("I'd like to ask you a few questions.")
@@ -10,7 +11,10 @@ likes = input(prompt)
 
 print(f"Where do you live {user_name}")
 lives = input(prompt)
-print("What kind of computer do you have?")
+
+print(f"How old are you{user_name}?")
+age = input(prompt)
+print(f"You're {int(age)} What kind of computer do you have?")
 computer = input(prompt)
 
 print(f"""
